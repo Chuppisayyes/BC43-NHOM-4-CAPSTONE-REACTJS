@@ -2,6 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './Home.min.css';
 import Carousel from '../../components/Carousel/Carousel';
+import Footer from '../../components/Footer/Footer';
+
+
 const Home = (props) => {
     return (
         <div>
@@ -166,7 +169,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </section>
-
+            <Footer/>
         </div>
     )
 }

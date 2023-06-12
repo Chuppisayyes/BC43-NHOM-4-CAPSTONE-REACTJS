@@ -4,11 +4,14 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeTemplate from './templates/HomeTemplate';
 import Home from './pages/Index/Home';
-
+import Register from './pages/Register/Register';
+import Detail from './pages/Detail/Detail';
+import Login from './pages/Login/Login';
 
 //Cấu hình redux
 import { Provider } from 'react-redux';
 import { store } from './redux/configStore';
+
 
 
 
@@ -20,6 +23,9 @@ root.render(
       <Routes>
         <Route path="" element={<HomeTemplate />} >
           <Route index element={<Home />}></Route>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="register" element={<Register />}></Route>
+          <Route path="detail" element={<Detail />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

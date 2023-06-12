@@ -1,0 +1,153 @@
+#footer {
+    margin-bottom: 0px;
+    .top_content {
+        background-color: #fafafa;
+        padding: 25px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            .content_top {
+                width: 100%;
+                margin-top: 10px;
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-right: 2px solid #e2e2e2;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin-left: 15px;
+                }
+
+                h3 {
+                    text-transform: uppercase;
+
+                    @media screen and (min-width:575px) and (max-width:767px) {
+                        font-size: 20px;
+                        width: 120%;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    width: 110%;
+
+                    a {
+                        text-decoration: none;
+                        color: #000;
+
+                        @media screen and (min-width:375px) and (max-width:574px) {
+                            margin-right: 10%;
+                        }
+
+                        @media screen and (min-width:1px) and (max-width:375px) {
+                            margin-right: 10%;
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: red;
+                }
+
+                @media screen and (max-width:768px) {
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        width: 70%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 80%;
+                        padding-right: 5%;
+                    }
+                }
+
+                @media screen and (min-width:575px) and (max-width:767px) {
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        width: 70%;
+                        padding: 0;
+                    }
+                }
+
+                @media screen and (min-width:375px)and (max-width:574px) {
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        margin: 0;
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+
+                @media screen and (min-width:1px) and (max-width:375px) {
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        margin: 0;
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            @media screen and (min-width:375px)and (max-width:574px) {
+                display: block;
+                padding-top: 15px;
+                text-align: center;
+            }
+
+            @media screen and (min-width:1px) and (max-width:375px) {
+                display: block;
+                padding-top: 15px;
+                text-align: center;
+            }
+        }
+    }
+
+    .bot_content {
+        padding: 10px 0;
+        margin-bottom: 0px;
+        background-color: #ececec;
+
+        .container {
+            align-items: center;
+            .short-content{
+                margin-top: 15px;
+            }
+            .social-menu{
+                margin-top: 10px;
+                .social-link{
+                    display: flex;
+                    .social-item{
+                        display: inline-block;
+                        list-style: none;
+                        margin-right: 20px;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            // @media screen and (min-width:375px)and (max-width:574px) {
+            //     display: block;
+            //     text-align: center;
+            // }
+
+            // @media screen and (min-width:1px) and (max-width:375px) {
+            //     display: block;
+            //     text-align: center;
+            // }
+        }
+    }
+}
