@@ -1,0 +1,225 @@
+.carousel {
+    margin-top: 30px;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    height: 500px;
+    width: 100%;
+
+    .container {
+        .carousel-flex {
+            display: flex;
+            justify-content: space-around;
+
+            .carousel-img {
+                padding-bottom: 70px;
+
+                img {
+                    padding-left: 40px;
+                    align-items: center;
+                }
+            }
+
+            .carousel-content {
+                padding-top: 100px;
+
+                h1 {
+                    background-color: white;
+                    width: 115%;
+                    text-align: center;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 45px;
+                }
+
+                p {
+                    text-align: center;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    letter-spacing: 0.5px;
+                    font-size: 20px;
+                    opacity: 0.7;
+                }
+                .btn-buy{
+                    text-align: center;
+                    .c-button {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        color: #000;
+                        font-weight: 700;
+                        font-size: 16px;
+                        text-decoration: none;
+                        padding: 0.9em 1.6em;
+                        cursor: pointer;
+                        display: inline-block;
+                        vertical-align: middle;
+                        position: relative;
+                        z-index: 1;
+                    }
+    
+                    .c-button--gooey {
+                        color: #AAC8A7;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        border: 4px solid #AAC8A7;
+                        border-radius: 10px;
+                        position: relative;
+                        transition: all 700ms ease;
+                        .c-button__blobs {
+                            height: 100%;
+                            filter: url(#goo);
+                            overflow: hidden;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: -3px;
+                            right: -1px;
+                            z-index: -1;
+                        }
+                    }
+                    .c-button--gooey .c-button__blobs div {
+                        background-color: #AAC8A7;
+                        width: 34%;
+                        height: 100%;
+                        border-radius: 100%;
+                        position: absolute;
+                        transform: scale(1.4) translateY(125%) translateZ(0);
+                        transition: all 700ms ease;
+                    }
+    
+                    .c-button--gooey .c-button__blobs div:nth-child(1) {
+                        left: -5%;
+                    }
+    
+                    .c-button--gooey .c-button__blobs div:nth-child(2) {
+                        left: 30%;
+                        transition-delay: 60ms;
+                    }
+    
+                    .c-button--gooey .c-button__blobs div:nth-child(3) {
+                        left: 66%;
+                        transition-delay: 25ms;
+                    }
+    
+                    .c-button--gooey:hover {
+                        color: #fff;
+                    }
+    
+                    .c-button--gooey:hover .c-button__blobs div {
+                        transform: scale(1.4) translateY(0) translateZ(0);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        margin-top: 30px;
+        height: 400px;
+        .container {
+            .carousel-flex {
+                padding-bottom: 30px;
+
+                .carousel-img {
+                    width: 65%;
+
+                    img {
+                        width: 98%;
+                        height: 98%;
+                    }
+                }
+
+                .carousel-content {
+                    width: 35%;
+                    h1{
+                        font-size: 35px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        height: 300px;
+        .container {
+            margin-top: 0px;
+            .carousel-flex {
+                padding-bottom: 50px;
+
+                .carousel-img {
+                    width: 53%;
+                    padding-bottom: 0px;
+                    margin-top: 50px;
+
+                    img {
+                        padding-left: 20px;
+                        width: 98%;
+                        height: 98%;
+                    }
+                }
+
+                .carousel-content {
+                    width: 50%;
+                    padding-top: 50px;
+                    line-height: 1;
+
+                    h1 {
+                        font-size: 32px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                    }
+
+                    button {
+                        padding: 10px 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 576px) {
+        height: 200px;
+        .container {
+            margin-top: 0px;
+
+            .carousel-flex {
+                padding-bottom: 70px;
+
+                .carousel-img {
+                    width: 50%;
+                    padding-bottom: 0px;
+                    margin-top: 50px;
+
+                    img {
+                        padding-left: 20px;
+                        width: 98%;
+                        height: 98%;
+                    }
+                }
+
+                .carousel-content {
+                    width: 47%;
+                    padding-top: 50px;
+                    line-height: 1;
+
+                    h1 {
+                        font-size: 18px;
+                        position: relative;
+                        right: 10px;
+                    }
+                    p {
+                        font-size: 10px;
+                    }
+
+                    .btn-buy{
+                        .c-button{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

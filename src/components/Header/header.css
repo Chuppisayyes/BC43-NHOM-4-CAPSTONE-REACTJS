@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Libre+Bodoni:wght@400;500;700&family=Roboto+Serif:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  margin-top: 20px;
+}
+#header .top_header {
+  background-color: #000;
+}
+#header .top_header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .top_header .container .left_content .logo svg {
+  color: white;
+}
+#header .top_header .container .right_content a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: white;
+}
+#header .top_header .container .right_content a i {
+  font-size: 16px;
+}
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  #header .top_header .container .right_content {
+    font-size: 14px;
+  }
+}
+#header .menu .container {
+  margin-top: 14px;
+}
+#header .menu .container .menu-content {
+  margin-left: 100px;
+}
+#header .menu .container .menu-content a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.6;
+  position: relative;
+  font-size: 18px;
+  margin-left: 15px;
+}
+#header .menu .container .menu-content a::after {
+  content: "";
+  background-color: #000;
+  margin-top: 5px;
+  height: 3px;
+  display: block;
+  transform: scale(0, 1);
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+#header .menu .container .menu-content a:hover {
+  color: black;
+  opacity: 1;
+}
+#header .menu .container .menu-content a:hover::after {
+  transform: scale(1, 1);
+  transition: all 0.5s;
+}
