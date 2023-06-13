@@ -15,9 +15,12 @@ const Header = (props) => {
                             </div>
                         </div>
                         <div className="right_content d-flex">
-                            <a href><i className="fa fa-shopping-cart" /></a>
+                            <NavLink className="nav-link" to="/cart"><i className="fa fa-shopping-cart" /></NavLink>
                             <NavLink className="nav-link" to="/login">Login</NavLink>
                             <NavLink className="nav-link" to="/register">Register</NavLink>
+                            <NavLink className="nav-link" to="/detail">Detail</NavLink>
+                            <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                            <NavLink className="nav-link" to="/search">Search</NavLink>
                         </div>
                     </div>
                 </div>
