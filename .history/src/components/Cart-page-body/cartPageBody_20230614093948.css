@@ -1,0 +1,450 @@
+.cart {
+  background-color: #FFEEBB;
+  padding: 50px;
+  margin-top: 20px;
+}
+.cart .container .table .thead-cart {
+  background-color: #F9FBE7;
+  border: 1px solid #bcd309;
+}
+.cart .container .table .thead-cart tr th {
+  text-align: center;
+  font-weight: 500;
+  /* actions */
+}
+.cart .container .table .thead-cart tr th .ui-checkbox,
+.cart .container .table .thead-cart tr th .ui-checkbox *,
+.cart .container .table .thead-cart tr th .ui-checkbox *::before,
+.cart .container .table .thead-cart tr th .ui-checkbox *::after {
+  box-sizing: border-box;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 8px #1677ff;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+.cart .container .table .thead-cart tr th .ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox:hover {
+  border-color: #1677ff;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox:checked {
+  background: #1677ff;
+  border-color: transparent;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox:checked::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.cart .container .table .thead-cart tr th .ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+.cart .container .table .space-devide {
+  height: 20px;
+}
+.cart .container .table .tbody-cart {
+  background-color: #F9FBE7;
+  border: 1px solid #bcd309;
+}
+.cart .container .table .tbody-cart .item td {
+  line-height: 1;
+  text-align: center;
+  /* actions */
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox,
+.cart .container .table .tbody-cart .item td .ui-checkbox *,
+.cart .container .table .tbody-cart .item td .ui-checkbox *::before,
+.cart .container .table .tbody-cart .item td .ui-checkbox *::after {
+  box-sizing: border-box;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 8px #1677ff;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox:hover {
+  border-color: #1677ff;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox:checked {
+  background: #1677ff;
+  border-color: transparent;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox:checked::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.cart .container .table .tbody-cart .item td .ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+.cart .container .table .tbody-cart .item td .btn-up-down {
+  margin-top: 5px;
+  border-radius: 0px;
+  border: 1px solid palegoldenrod;
+  display: flex;
+  justify-content: center;
+}
+.cart .container .table .tbody-cart .item td .btn-up-down .btn-up,
+.cart .container .table .tbody-cart .item td .btn-up-down .btn-down {
+  border-radius: 0px;
+  border: 1px solid palegoldenrod;
+  width: 33.3333333333%;
+  padding: 5px;
+}
+.cart .container .table .tbody-cart .item td .btn-up-down .show-up-number {
+  border: 1px solid palegoldenrod;
+  width: 33.3333333333%;
+  text-align: center;
+  padding: 5px;
+}
+.cart .container .table .tbody-cart .item td .btn-delete {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  opacity: 0.9;
+}
+.cart .container .table .tbody-cart .item td .btn-delete:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+.cart .container .table .tbody-cart .item td .btn-delete:active {
+  transform: scale(0.95);
+}
+.cart .container .table .tbody-cart .item td .more-item a {
+  text-align: center;
+  text-decoration: none;
+  color: red;
+  font-size: 13px;
+  opacity: 0.8;
+}
+.cart .container .table .tbody-cart .item .td-text {
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .cart {
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+  .cart .container .table .thead-cart tr th {
+    font-size: 14px;
+  }
+  .cart .container .table .space-devide {
+    height: 10px;
+  }
+  .cart .container .table .tbody-cart .item td {
+    font-size: 14px;
+  }
+  .cart .container .table .tbody-cart .item td .btn-delete {
+    padding: 4px 15px;
+    font-size: 13px;
+  }
+  .cart .container .table .tbody-cart .item td .more-item a {
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .cart {
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 576px) {
+  .cart {
+    padding: 5px;
+    margin-top: 10px;
+  }
+  .cart .container .table {
+    width: auto;
+  }
+  .cart .container .table .thead-cart {
+    background-color: #F9FBE7;
+    border: 1px solid #bcd309;
+  }
+  .cart .container .table .thead-cart tr th {
+    text-align: center;
+    font-weight: 500;
+    /* actions */
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox,
+  .cart .container .table .thead-cart tr th .ui-checkbox *,
+  .cart .container .table .thead-cart tr th .ui-checkbox *::before,
+  .cart .container .table .thead-cart tr th .ui-checkbox *::after {
+    box-sizing: border-box;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 8px #1677ff;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox::before {
+    top: 40%;
+    left: 50%;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    opacity: 0;
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox:hover {
+    border-color: #1677ff;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox:checked {
+    background: #1677ff;
+    border-color: transparent;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox:checked::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  }
+  .cart .container .table .thead-cart tr th .ui-checkbox:active:not(:checked)::after {
+    -webkit-transition: none;
+    -o-transition: none;
+    box-shadow: none;
+    transition: none;
+    opacity: 1;
+  }
+  .cart .container .table .space-devide {
+    height: 20px;
+  }
+  .cart .container .table .tbody-cart {
+    background-color: #F9FBE7;
+    border: 1px solid #bcd309;
+  }
+  .cart .container .table .tbody-cart .item td {
+    line-height: 1;
+    text-align: center;
+    /* actions */
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox,
+  .cart .container .table .tbody-cart .item td .ui-checkbox *,
+  .cart .container .table .tbody-cart .item td .ui-checkbox *::before,
+  .cart .container .table .tbody-cart .item td .ui-checkbox *::after {
+    box-sizing: border-box;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 8px #1677ff;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox::before {
+    top: 40%;
+    left: 50%;
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    opacity: 0;
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox:hover {
+    border-color: #1677ff;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox:checked {
+    background: #1677ff;
+    border-color: transparent;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox:checked::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  }
+  .cart .container .table .tbody-cart .item td .ui-checkbox:active:not(:checked)::after {
+    -webkit-transition: none;
+    -o-transition: none;
+    box-shadow: none;
+    transition: none;
+    opacity: 1;
+  }
+  .cart .container .table .tbody-cart .item td .btn-up-down {
+    margin-top: 5px;
+    border-radius: 0px;
+    border: 1px solid palegoldenrod;
+    display: flex;
+    justify-content: center;
+  }
+  .cart .container .table .tbody-cart .item td .btn-up-down .btn-up,
+  .cart .container .table .tbody-cart .item td .btn-up-down .btn-down {
+    border-radius: 0px;
+    border: 1px solid palegoldenrod;
+    width: 33.3333333333%;
+    padding: 5px;
+  }
+  .cart .container .table .tbody-cart .item td .btn-up-down .show-up-number {
+    border: 1px solid palegoldenrod;
+    width: 33.3333333333%;
+    text-align: center;
+    padding: 5px;
+  }
+  .cart .container .table .tbody-cart .item td .btn-delete {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  .cart .container .table .tbody-cart .item td .btn-delete:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  .cart .container .table .tbody-cart .item td .btn-delete:active {
+    transform: scale(0.95);
+  }
+  .cart .container .table .tbody-cart .item td .more-item a {
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .cart .container .table .tbody-cart .item .td-text {
+    padding-top: 20px;
+  }
+}

@@ -1,0 +1,24 @@
+.profile-page{
+    .container{
+        .header-profile-page{
+
+        }
+        .row{
+            .avatar-img{
+                f
+                img{
+                    border-radius: 50%;
+                }
+            }
+            .detail-profile{
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+                .info{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.profile-page{
+    .container{
+        .header-profile-page{
+
+        }
+        .row{
+            .avatar-img{
+                img{}
+            }
+            .detail-profile{
+                display: flex;
+                flex-wrap: wrap;
+                .info{
+                    display: flex;
+                }
+            }
+        }
+    }
+}

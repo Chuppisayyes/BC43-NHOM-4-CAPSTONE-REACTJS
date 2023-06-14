@@ -1,0 +1,139 @@
+.search-page {
+    margin-top: 20px;
+    // background-color: #FFEEBB;
+    .container {
+        padding: 10px;
+        .header-search-page {
+            padding: 10px 50px;
+            background-color: #A4D0A4;
+            color: #617A55;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: space-around;
+            .input-container {
+
+                position: relative;
+                margin: 30px 0px;
+                width: 800px;
+            }
+            .input-container input[type="text"] {
+                font-size: 20px;
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid #617A55;
+                padding: 5px 0;
+                background-color: transparent;
+                outline: none;
+            }
+
+            .input-container .label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: #617A55;
+                transition: all 0.3s ease;
+                pointer-events: none;
+            }
+
+            .input-container input[type="text"]:focus~.label,
+            .input-container input[type="text"]:valid~.label {
+                top: -20px;
+                font-size: 16px;
+                color: #F99B7D;
+            }
+
+            .input-container .underline {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                background-color: #F99B7D;
+                transform: scaleX(0);
+                transition: all 0.3s ease;
+            }
+
+            .input-container input[type="text"]:focus~.underline,
+            .input-container input[type="text"]:valid~.underline {
+                transform: scaleX(1);
+            }
+
+            .button-search {
+                margin-top: 30px;
+                // margin-right: 20px;
+                .btn-search {
+                    color: #FEA1A1;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    border: 2px solid #FEA1A1;
+                    padding: 8px 18px;
+                    font-size: 17px;
+                    font-weight: bold;
+                    background: transparent;
+                    position: relative;
+                    transition: all 1s;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 0%;
+                        top: 0;
+                        left: -40px;
+                        transform: skewX(45deg);
+                        background-color: #FEA1A1;
+                        z-index: -1;
+                        transition: all 1s;
+                    }
+
+                    &:hover {
+                        color: white;
+                    }
+
+                    &:hover::before {
+                        width: 160%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        margin-top: 25px;
+        padding: 20px;
+
+        .container {
+            .body-footer {
+                padding: 10px 80px 0px 80px;
+                .pay-cart {
+                    li {
+                        padding: 5px 10px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+            .bottom-footer {
+                padding: 10px 10px;
+                .right-bottom-footer {
+                    button {
+                        margin-left: 10px;
+                        padding: 2px 10px;
+                    }
+                    button span {
+                        font-size: 13px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 576px) {
+
+    }
+}

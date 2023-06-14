@@ -1,0 +1,33 @@
+.profile-page{
+    .container{
+        .header-profile-page{
+
+        }
+        .row{
+            .avatar-img{
+                display: flex;
+                padding: 20px 0px;
+                justify-content: center;
+                img{
+                    border-radius: 50%;
+                }
+            }
+            .detail-profile{
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+                .info{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 80px;
+                    ma
+                    span{
+                    }
+                    input{
+                    }
+                }
+            }
+        }
+    }
+}

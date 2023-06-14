@@ -1,0 +1,20 @@
+.profile-page{
+    .container{
+        .header-profile-page{
+
+        }
+        .row{
+            .avatar-img{
+                img{}
+            }
+            .detail-profile{
+                display: flex;
+                
+                .info{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

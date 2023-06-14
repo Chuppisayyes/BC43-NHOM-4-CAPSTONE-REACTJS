@@ -1,0 +1,245 @@
+.profile-page {
+    margin: 50px 0px;
+    .container {
+        .header-profile-page {}
+        .row {
+            background-color: #FFEEBB;
+            padding: 20px;
+            .avatar-img {
+                display: flex;
+                padding: 20px 0px;
+                justify-content: center;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .detail-profile {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 60px;
+                    margin-right: 60px;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    input,
+                    select {
+                        margin-right: 300px;
+                        width: 300px;
+                        padding: 5px 10px;
+                    }
+                }
+
+                .update-info {
+                    width: 100%;
+                    text-align: end;
+                    .button-update {
+                        padding: 1em 2em;
+                        border: none;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                        color: #2c9caf;
+                        transition: all 1000ms;
+                        font-size: 15px;
+                        position: relative;
+                        overflow: hidden;
+                        outline: 2px solid #2c9caf;
+                    }
+
+                    .button-update:hover {
+                        color: #ffffff;
+                        transform: scale(1.1);
+                        outline: 2px solid #70bdca;
+                        box-shadow: 4px 5px 17px -4px #268391;
+                    }
+
+                    .button-update::before {
+                        content: "";
+                        position: absolute;
+                        left: -50px;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background-color: #2c9caf;
+                        transform: skewX(45deg);
+                        z-index: -1;
+                        transition: width 1000ms;
+                    }
+
+                    .button-update:hover::before {
+                        width: 250%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+
+        .container {
+            .header-profile-page {}
+            .row {
+                padding: 10px;
+                .avatar-img {
+                    padding: 20px 0px;
+                    justify-content: center;
+    
+                    img {
+                        width: 230px;
+                        height: 230px;
+                        border-radius: 50%;
+                    }
+                }
+                .detail-profile {
+                    .info {
+                        width: 100%;
+                        padding: 5px 30px;
+                        margin-right: 10px;
+                        input,
+                        select {
+                            margin-right: 10px;
+                            width: 200px;
+                        }
+                    }
+                    .update-info {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        .container {
+            .header-profile-page {}
+            .row {
+                padding: 10px;
+                .avatar-img {
+                    padding: 20px 0px;
+                    img {
+                        width: 170px;
+                        height: 170px;
+
+                    }
+                }
+                .detail-profile {
+                    .info {
+                        width: 100%;
+                        padding: 3px 5px;
+                        margin-right: 0px;
+                        input,
+                        select {
+                            margin-right: 0px;
+                            width: 200px;
+                        }
+                    }
+                    .update-info {
+                        margin-top: 10px;
+                        .button-update {
+                            padding: 0.5em 1em;
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            color: #2c9caf;
+                            transition: all 1000ms;
+                            font-size: 13px;
+                            position: relative;
+                            overflow: hidden;
+                            outline: 2px solid #2c9caf;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 576px) {
+        margin: 30px 0px;
+        .container {
+            .header-profile-page {}
+            .row {
+                background-color: #FFEEBB;
+                padding: 5px;
+                .avatar-img {
+                    padding: 10px 0px;
+                    justify-content: center;
+    
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+                .detail-profile {
+                    .info {
+                        padding: 3px 0px;
+                        margin-right: 0px;
+                        span {
+                            font-size: 10px;
+                        }
+                        input,
+                        select {
+                            margin-right: 0px;
+                            width: 100px;
+                            padding: 5px 10px;
+                        }
+                    }
+    
+                    .update-info {
+                        width: 100%;
+                        text-align: end;
+                        .button-update {
+                            padding: 1em 2em;
+                            border: none;
+                            border-radius: 5px;
+                            font-weight: bold;
+                            letter-spacing: 5px;
+                            text-transform: uppercase;
+                            color: #2c9caf;
+                            transition: all 1000ms;
+                            font-size: 15px;
+                            position: relative;
+                            overflow: hidden;
+                            outline: 2px solid #2c9caf;
+                        }
+    
+                        .button-update:hover {
+                            color: #ffffff;
+                            transform: scale(1.1);
+                            outline: 2px solid #70bdca;
+                            box-shadow: 4px 5px 17px -4px #268391;
+                        }
+    
+                        .button-update::before {
+                            content: "";
+                            position: absolute;
+                            left: -50px;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background-color: #2c9caf;
+                            transform: skewX(45deg);
+                            z-index: -1;
+                            transition: width 1000ms;
+                        }
+    
+                        .button-update:hover::before {
+                            width: 250%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

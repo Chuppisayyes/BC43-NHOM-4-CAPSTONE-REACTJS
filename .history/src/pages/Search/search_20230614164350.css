@@ -1,0 +1,85 @@
+.search-page {
+  margin-top: 20px;
+  background-color: #FFEEBB;
+}
+.search-page .container {
+  padding: 10px;
+}
+.search-page .container .header-search-page {
+  padding: 10px 50px;
+  background-color: #A4D0A4;
+  color: #617A55;
+}
+.search-page .container .search-bar .input-container {
+  position: relative;
+  margin: 0px auto;
+  width: 800px;
+}
+.search-page .container .search-bar .input-container input[type=text] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #617A55;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+.search-page .container .search-bar .input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #617A55;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.search-page .container .search-bar .input-container input[type=text]:focus ~ .label,
+.search-page .container .search-bar .input-container input[type=text]:valid ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+.search-page .container .search-bar .input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.search-page .container .search-bar .input-container input[type=text]:focus ~ .underline,
+.search-page .container .search-bar .input-container input[type=text]:valid ~ .underline {
+  transform: scaleX(1);
+}
+.search-page .container .search-bar .button-search .btn-search {
+  color: purple;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+.search-page .container .search-bar .button-search .btn-search::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: purple;
+  z-index: -1;
+  transition: all 1s;
+}
+.search-page .container .search-bar .button-search .btn-search:hover {
+  color: white;
+}
+.search-page .container .search-bar .button-search .btn-search:hover::before {
+  width: 160%;
+}
