@@ -1,0 +1,7 @@
+.profile-page .container .row .detail-profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile-page .container .row .detail-profile .info {
+  display: flex;
+}

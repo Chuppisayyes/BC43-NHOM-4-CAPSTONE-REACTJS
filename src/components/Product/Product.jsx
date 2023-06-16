@@ -1,167 +1,52 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import axios from 'axios';
 import './product.css';
 
-const Product = (props) => {
+const Product = () => {
+    const [arrProduct, setArrProduct] = useState([]);
+
+    useEffect(() => {
+        //Call api lúc trang vừa load
+        getAllProduct();
+    },[]);
+    const getAllProduct = async () => {
+        const result = await axios({
+            url: "https://shop.cyberlearn.vn/api/Product",
+            method: "GET",
+        });
+        console.log(result.data.content);
+        //Đưa dữ liệu lấy tự api về vào state
+        setArrProduct(result.data.content);
+        console.log(arrProduct);
+    }
     return (
         <div>
             <section class="products">
                 <div class="container">
                     <h3 class="title">-Featured Products-</h3>
-                    <div class="list-item">
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
+                    <div className='list-item'>
+                        {arrProduct.map((prod, index) => {
+                            return <div className="products-item" key={index}>
+                                <div className="card">
+                                    <div className="item-image">
+                                        <img src={prod.image} alt="..." />
                                     </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
+                                    <div className="products-body">
+                                        <div className="info">
+                                            <h1 className="name">{prod.name}</h1>
+                                            <span>{prod.shortDescription}</span>
+                                        </div>
+                                        <div className="products-btn">
+                                            <NavLink className={"btn-products nav-link text-center"} to={`/detail/${prod.id}`}>
+                                                <span className='text-btn'>Buy now</span>
+                                            </NavLink>
+                                            <p className="price">{prod.price}$</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="products-item">
-                            <div className="card">
-                                <div className="item-image">
-                                    <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
-                                </div>
-                                <div className="products-body">
-                                    <div className="info">
-                                        <h1 className="name">Nike Air Max 97 Blue</h1>
-                                        <span>Paul George is the rare high-percentage shooter</span>
-                                    </div>
-                                    <div className="products-btn">
-                                        <button className="btn-products"><a href="./detail.html?id=${prod.id}">Buy now</a></button>
-                                        <p className="price">350$</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        })}
                     </div>
                 </div>
             </section>
@@ -169,6 +54,4 @@ const Product = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({})
-
-export default connect(mapStateToProps)(Product)
+export default Product

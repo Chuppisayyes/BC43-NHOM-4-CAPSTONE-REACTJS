@@ -1,35 +1,47 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { NavLink, useParams } from 'react-router-dom'
+import axios from 'axios';
 import './detail.css';
-import Product from '../../components/Product/Product';
 import Footer from '../../components/Footer/Footer'
 
-const Detail = (props) => {
+
+const Detail = () => {
+    const [productDetail, setProductDetail] = useState({})
+    //Lấy tham số trên url
+
+    const params = useParams();
+    useEffect(() => {
+        //Call api lúc trang vừa load
+        getProductDetailApi(params.id);
+    }, [params.id]);
+
+    const getProductDetailApi = async (id) => {
+        const result = await axios({
+            url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+            method: 'GET'
+        });
+        //Đưa dữ liệu lấy tự api về vào state
+        setProductDetail(result.data.content);
+    }
     return (
         <div>
             <section id="products_detail">
                 <div className="container">
                     <div className="content_left">
-                        <img src="https://shop.cyberlearn.vn/images/nike-air-max-97-blue.png" alt="..." />
+                        <img src={productDetail.image} alt="..." />
                     </div>
                     <div className="content_right">
                         <div className="info">
-                            <h3>Product name</h3>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                                pariatur sequi esse ducimus veritatis aspernatur totam inventore,
-                                tempore rem impedit illum qui a quae aperiam officiis, error
-                                repellat sunt nulla! ( Thuộc tính Description)
-                            </p>
+                            <h3>{productDetail.name}</h3>
+                            <p>{productDetail.description}</p>
                         </div>
                         <div className="size_products">
                             <span>Available size</span>
                             <br />
-                            <button className="sizes">38</button>
-                            <button className="sizes">39</button>
-                            <button className="sizes">40</button>
-                            <button className="sizes">41</button>
-                            <button className="sizes">42</button>
+                        {productDetail.size?.map((prod, index) => {
+                            return <button class="sizes">{prod}</button>
+                        })}
+                            
                         </div>
                         <div className="cost">
                             <span>85$</span>
@@ -43,11 +55,36 @@ const Detail = (props) => {
                     </div>
                 </div>
             </section>
-            <Product />
+            <section className='relate-product'>
+                <div className="container">
+                    <h3 className='title'>Relate products</h3>
+                    <div className='list-item'>
+                        {productDetail.relatedProducts?.map((prod, index) => {
+                            return <div className="products-item" key={index}>
+                                <div className="card">
+                                    <div className="item-image">
+                                        <img src={prod.image} alt="..." />
+                                    </div>
+                                    <div className="products-body">
+                                        <div className="info">
+                                            <h1 className="name">{prod.name}</h1>
+                                            <span>{prod.shortDescription}</span>
+                                        </div>
+                                        <div className="products-btn">
+                                            <NavLink className={"btn-products nav-link text-center"} to={`/detail/${prod.id}`}>
+                                                <span className='text-btn'>Buy now</span>
+                                            </NavLink>
+                                            <p className="price">{prod.price}$</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        })}
+                    </div>
+                </div>
+            </section >
             <Footer />
-        </div>
+        </div >
     )
 }
-
-const mapStateToProps = (state) => ({})
-export default connect(mapStateToProps)(Detail)
+export default Detail

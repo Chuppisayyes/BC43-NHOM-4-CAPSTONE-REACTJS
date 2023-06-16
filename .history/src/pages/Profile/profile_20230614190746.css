@@ -1,0 +1,8 @@
+.profile-page .container .row .detail-profile {
+  display: flex;
+  flex-direction: column;
+}
+.profile-page .container .row .detail-profile .info {
+  display: flex;
+  justify-content: center;
+}

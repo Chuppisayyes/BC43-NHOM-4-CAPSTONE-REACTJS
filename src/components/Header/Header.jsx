@@ -18,7 +18,6 @@ const Header = (props) => {
                             <NavLink className="nav-link" to="/cart"><i className="fa fa-shopping-cart" /></NavLink>
                             <NavLink className="nav-link" to="/login">Login</NavLink>
                             <NavLink className="nav-link" to="/register">Register</NavLink>
-                            <NavLink className="nav-link" to="/detail">Detail</NavLink>
                             <NavLink className="nav-link" to="/profile">Profile</NavLink>
                             <NavLink className="nav-link" to="/search">Search</NavLink>
                         </div>
@@ -27,7 +26,7 @@ const Header = (props) => {
                 <nav className="menu">
                     <div className="container">
                         <div className="menu-content">
-                            <a href=".">Home</a>
+                            <a href="/">Home</a>
                             <a href=".">Men</a>
                             <a href=".">Woman</a>
                             <a href=".">Kid</a>

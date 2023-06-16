@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
 import { connect } from 'react-redux'
 import './carousel.css';
 const Carousel = (props) => {
@@ -21,13 +23,13 @@ const Carousel = (props) => {
                                         <h1 class="carousel-content-h1">Nike Air Max 97 Blue</h1>
                                         <p>Paul George is the rare high-percentage shooter</p>
                                         <div className='btn-buy'>
-                                            <button className="c-button c-button--gooey"> Buy now
+                                            <NavLink className={"c-button c-button--gooey"}  to={`/detail/11`}> Buy now
                                                 <div className="c-button__blobs">
                                                     <div />
                                                     <div />
                                                     <div />
                                                 </div>
-                                            </button>
+                                            </NavLink>
                                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'block', height: 0, width: 0 }}>
                                                 <defs>
                                                     <filter id="goo">
@@ -52,13 +54,13 @@ const Carousel = (props) => {
                                         <h1 class="carousel-content-h1">Adidas Ultraboost 4</h1>
                                         <p>Paul George is the rare high-percentage shooter</p>
                                         <div className='btn-buy'>
-                                            <button className="c-button c-button--gooey"> Buy now
+                                        <NavLink className={"c-button c-button--gooey"}  to={`/detail/7`}> Buy now
                                                 <div className="c-button__blobs">
                                                     <div />
                                                     <div />
                                                     <div />
                                                 </div>
-                                            </button>
+                                            </NavLink>
                                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'block', height: 0, width: 0 }}>
                                                 <defs>
                                                     <filter id="goo">
@@ -83,13 +85,13 @@ const Carousel = (props) => {
                                         <h1 class="carousel-content-h1">Nike Air Max 270 React</h1>
                                         <p>Paul George is the rare high-percentage shooter</p>
                                         <div className='btn-buy'>
-                                            <button className="c-button c-button--gooey"> Buy now
+                                        <NavLink className={"c-button c-button--gooey"}  to={`/detail/12`}> Buy now
                                                 <div className="c-button__blobs">
                                                     <div />
                                                     <div />
                                                     <div />
                                                 </div>
-                                            </button>
+                                            </NavLink>
                                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'block', height: 0, width: 0 }}>
                                                 <defs>
                                                     <filter id="goo">

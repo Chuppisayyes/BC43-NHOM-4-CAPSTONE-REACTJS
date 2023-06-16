@@ -49,6 +49,7 @@
   vertical-align: middle;
   position: relative;
   z-index: 1;
+  background-color: #FAF0E4;
 }
 .carousel .container .carousel-flex .carousel-content .btn-buy .c-button--gooey {
   color: #AAC8A7;

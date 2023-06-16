@@ -1,0 +1,28 @@
+.profile-page .container .row .avatar-img {
+  display: flex;
+  padding: 20px 0px;
+  justify-content: center;
+}
+.profile-page .container .row .avatar-img img {
+  border-radius: 50%;
+}
+.profile-page .container .row .detail-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile-page .container .row .detail-profile .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+  margin-right: 100px;
+}
+.profile-page .container .row .detail-profile .info span {
+  font-weight: 700;
+}
+.profile-page .container .row .detail-profile .info input, .profile-page .container .row .detail-profile .info select {
+  margin-right: 300px;
+  width: 200px;
+  padding: 10px;
+}
