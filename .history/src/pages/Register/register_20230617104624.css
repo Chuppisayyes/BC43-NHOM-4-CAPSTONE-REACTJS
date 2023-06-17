@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Libre+Bodoni:wght@400;500;700&family=Roboto+Serif:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#body {
+  margin-bottom: 10%;
+}
+#body h3 {
+  margin: 1% 8% 10px 0;
+}
+#body .container .form_input {
+  margin: 40px 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+}
+#body .container .form_input .form {
+  margin-top: 10px;
+}
+#body .container .form_input .form .form-control {
+  border-width: 0 0 5px 0;
+  transition: none;
+  border-color: #ccc;
+  border-radius: 0;
+}
+#body .container .form_input .form .form-control:focus {
+  box-shadow: none;
+  border-color: #ae18e2;
+  transition: all 0.75s;
+}
+#body .container .form_input .form .sign-error {
+  color: re;
+}
+#body .container .form_input .gender {
+  margin-top: 10px;
+  position: relative;
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  #body .container .form_input .gender {
+    width: 105%;
+  }
+}
+#body .container .form_input .gender label {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  #body .container .form_input .gender label {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 574px) {
+  #body .container .form_input .gender label {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  #body .container .form_input .gender label {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+}
+#body .container .form_input .gender label input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  #body .container .form_input .gender label input {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 574px) {
+  #body .container .form_input .gender label input {
+    height: 20px;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  #body .container .form_input .gender label input {
+    height: 10px;
+  }
+}
+#body .container .form_input .gender label .checkmark {
+  padding: auto;
+  opacity: 0.6;
+  font-size: 15px;
+}
+#body .container .form_input .gender .submit {
+  position: absolute;
+  bottom: -85px;
+  left: 15px;
+  padding: 10px 70px;
+  border: none;
+  background-color: #ae18e2;
+  color: white;
+  font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+  #body .container .form_input .gender .submit {
+    font-size: 20px;
+    padding: 10px 40px;
+    bottom: -70px;
+  }
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  #body .container .form_input .gender .submit {
+    padding: 5px 35px;
+    bottom: -45px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 574px) {
+  #body .container .form_input .gender .submit {
+    left: 30%;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  #body .container .form_input .gender .submit {
+    padding: 5px 25px;
+    bottom: -50px;
+    left: 25%;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 574px) {
+  #body .container .form_input {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 375px) {
+  #body .container .form_input {
+    grid-template-columns: auto;
+  }
+}
